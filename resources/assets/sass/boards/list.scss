@@ -1,0 +1,51 @@
+.list {
+  margin: 10px;
+  min-width: 270px;
+  max-width: 270px;
+  //Hmm This shouldn't need to be this large. Investigate later.
+  height: 100%;
+  //margin-bottom: 350px !important;
+}
+
+.list-header {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 5px;
+  color: black;
+
+}
+
+.list-container {
+  background: #e2e4e6;
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.list-item-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  // min-height: 200px;
+}
+
+.list-item {
+
+}
+
+.new-list {
+  border-radius: 5px;
+  padding: 5px;
+  height: 30px;
+  background: $transparentBackground;
+  a {
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+  }
+  a:hover {
+    color: white;
+  }
+}

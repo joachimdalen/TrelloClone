@@ -1,0 +1,84 @@
+.new-card {
+  margin-bottom: -4px;
+  //position: absolute;
+  padding-top: 10px;
+  bottom: 0;
+  left: 2px;
+  width: 95%;
+  height: 30px;
+  a {
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.item-card {
+  background-color: white;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  color: black;
+}
+
+.item-card:hover {
+  background: lightsteelblue;
+  cursor: pointer;
+}
+
+.card-id-container {
+  //This fixes the overlapping of card-content but the id tag is now no longer in the top
+  //  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: darkorange;
+  border-top-left-radius: 5px;
+  font-weight: bold;
+  font-size: 8px;
+  display: inline-block;
+}
+
+.card-label-container {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  display: inline-block;
+
+  .card-label {
+    font-size: 8px;
+    color: white;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 2px;
+  }
+}
+
+.card-details-container {
+  display: inline-block;
+}
+
+.card-content {
+  margin: 10px;
+  font-size: 12px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    max-height: 150px;
+    margin-bottom: 5px;
+  }
+}
+
+.card-footer {
+  margin: 10px;
+  .card-members {
+    position: relative;
+    bottom: 0;
+    right: 3px;
+    img {
+      border-radius: 5px;
+    }
+  }
+}
