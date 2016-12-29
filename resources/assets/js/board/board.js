@@ -3,24 +3,27 @@
  */
 console.log('Loaded board.js');
 $(".list-item").click(function () {
-    console.log(this);
+    /*    var newCard = $('#newCard');
+     var listItem = document.createElement('div');
+     listItem.clas*/
+
 });
-$(".new-list").click(function () {
+$(".new-list").on('click', function () {
     var newList = $('#newList');
-    var addedList = $('\<div class="list">\<div class="list-container"><div class="list-header">' +
-        'This is my list\</div><div class="list-item-container"><div class="list-item">' +
-        '\<div class="new-card"><a>Add new card...</a></div></div></div></div></div>')
+    var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">This is my list' +
+        '\</div><div class="list-item-container"><div class="new-card"><a id="newModalTrigger">Add new card...' +
+        '\</a></div></div></div></div>')
         .insertBefore(newList);
 });
-$(".new-card").click(function () {
+$(document).on('click', '.new-card', function () {
     var newCard = $('#newCard');
     var addedCard = $('\<div class="list-item"><div class="item-card"><div class="card-id-container">' +
         '#1000\</div><div class="card-label-container"></div><div class="card-content"> ' +
         'Fix divs in container to lign up with each other. \</div> <div class="card-footer"></div></div></div>')
         .insertBefore(this);
-
+    console.log('ehhh...');
 });
-$("#show-menu").click(function () {
+$("#show-menu").on('click', function () {
     var menu = $('#side-menu');
     var menuButton = $('#show-menu');
     if (menu.is(":visible")) {
