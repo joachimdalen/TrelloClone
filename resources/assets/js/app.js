@@ -16,4 +16,5 @@
 
 require('./bootstrap');
 require('./board/board');
+require('./board/modal');
 

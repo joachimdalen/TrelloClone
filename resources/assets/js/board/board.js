@@ -18,6 +18,7 @@ $(".new-card").click(function () {
         '#1000\</div><div class="card-label-container"></div><div class="card-content"> ' +
         'Fix divs in container to lign up with each other. \</div> <div class="card-footer"></div></div></div>')
         .insertBefore(this);
+
 });
 $("#show-menu").click(function () {
     var menu = $('#side-menu');
