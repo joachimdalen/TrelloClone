@@ -1,3 +1,0 @@
-@section('list-base')
-
-@stop
