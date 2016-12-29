@@ -6,15 +6,19 @@ $transparentBackground: rgba(0, 0, 0, .12);
   // display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
+  z-index: 10;
+  padding-bottom: 24px;
+  height: calc(100% - 60px) !important;
   // overflow: scroll;
-  overflow: scroll;
+  //
+  /*overflow: scroll;
   position: absolute;
   width: 100%;
   height: calc(100% - 60px);
   left: 0;
-  z-index: 10;
-  padding-bottom: 24px;
-  margin: 0;
+  margin: 0;*/
+
+  //
 /*  display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;

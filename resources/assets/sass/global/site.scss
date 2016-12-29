@@ -6,3 +6,11 @@
   background: #454749;
   color: white;
 }
+.fill-page-container {
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 30px);
+  left: 0;
+  margin: 0;
+}

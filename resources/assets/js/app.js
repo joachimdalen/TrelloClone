@@ -15,6 +15,6 @@
  });*/
 
 require('./bootstrap');
-require('./board/board');
-require('./board/modal');
-
+/*require('./board/board');
+require('./board/modal');*/
+//require('./global/registrator');
