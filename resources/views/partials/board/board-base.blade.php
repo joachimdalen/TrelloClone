@@ -185,13 +185,11 @@
                         <a>Add new list...</a>
                     </div>
                 </div>
-
-
-            </div>
-            <div class="menu-container" id="side-menu">
-                <div class="menu-header">
-                    <h3>Menu</h3>
-                    <hr>
+                <div class="menu-container" id="side-menu">
+                    <div class="menu-header">
+                        <h3>Menu</h3>
+                        <hr>
+                    </div>
                 </div>
             </div>
         </main>

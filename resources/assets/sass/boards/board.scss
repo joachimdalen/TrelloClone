@@ -3,17 +3,27 @@ $transparentBackground: rgba(0, 0, 0, .12);
 
 .board-container {
   display: -webkit-flex;
- // display: flex;
+  // display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
- // overflow: scroll;
-  overflow-x: scroll;
+  // overflow: scroll;
+  overflow: scroll;
   position: absolute;
   width: 100%;
   height: calc(100% - 30px);
   left: 0;
   z-index: 10;
   padding-bottom: 24px;
+  margin: 0;
+/*  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  height: calc(100% - 30px);
+  width: 100%;
+  overflow: scroll;*/
 }
 
 .board-header {

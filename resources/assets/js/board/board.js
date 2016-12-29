@@ -35,8 +35,8 @@ $("#show-menu").click(function () {
     }
 });
 $(document).ready(function () {
-  //  $('#side-menu').hide();
+    $('#side-menu').hide();
 });
 $('#side-menu').blur(function () {
-   $('#side-menu').hide();
+    $('#side-menu').hide();
 });
