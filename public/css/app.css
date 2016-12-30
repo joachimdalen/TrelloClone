@@ -366,8 +366,12 @@
   width: 100%;
   height: 40px !important;
   padding-top: 5px;
-  background: #454749;
+  background: #3c6996;
   color: white;
+}
+
+.site-header span {
+  font-weight: bold;
 }
 
 .fill-page-container {
