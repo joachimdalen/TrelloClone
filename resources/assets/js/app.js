@@ -13,8 +13,9 @@
  const app = new Vue({
  el: '#app'
  });*/
-
-require('./bootstrap');
+window._ = require('lodash');
+window.$ = window.jQuery = require('jquery');
+//require('./bootstrap');
 /*require('./board/board');
 require('./board/modal');*/
 //require('./global/registrator');

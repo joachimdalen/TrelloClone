@@ -31,8 +31,9 @@
                     <div class="item-card">
                         <div class="card-id-container">#1000</div>
                         <div class="card-label-container">
-                            <div class="card-label color-fill">Frontend</div>
-                            <div class="card-label color-fill-pink">Done</div>
+                            <span class="label label-default">Default</span>
+                            <span class="label label-primary">Primary</span>
+                            <span class="label" style="background: #000">Success</span>
                         </div>
                         <div class="card-content">
                             <img src="http://placehold.it/150x350">
