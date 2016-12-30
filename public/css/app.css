@@ -422,6 +422,21 @@
   text-align: center;
 }
 
+.modal-toolbar-status {
+  padding-bottom: 7px;
+  color: rgba(146, 146, 146, 0.95);
+  font-size: 12px;
+  text-align: left;
+  display: -webkit-box;
+  display: flex;
+}
+
+.modal-labels {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+}
+
 .card-description {
   width: calc(100% - 10px);
   max-width: calc(100% - 10px);

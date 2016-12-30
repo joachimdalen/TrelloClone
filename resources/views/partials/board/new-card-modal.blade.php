@@ -6,6 +6,20 @@
             <input type="text" placeholder="Title here" class="input-control">
             <span class="sub-title">in This is my new list</span>
         </div>
+        <div class="modal-toolbar modal-toolbar-status">
+            <span><i class="fa fa-clock-o"></i> 25/12/2016</span>
+            <div class="modal-labels">
+                <span class="label label-bg label-red">Default</span>
+                <span class="label label-bg label-primary">Primary</span>
+                <span class="label label-bg label-green">Success</span>
+                <span class="label label-bg label-red">Default</span>
+                <span class="label label-bg label-primary">Primary</span>
+                <span class="label label-bg label-green">Success</span>
+                <span class="label label-bg label-red">Default</span>
+                <span class="label label-bg label-primary">Primary</span>
+                <span class="label label-bg label-green">Success</span>
+            </div>
+        </div>
         <div class="modal-toolbar">
             <a class="tool-button tool-button-sm" href="javascript:void(0)" onclick="openTab('Description')"><i
                         class="fa fa-comment"></i> Description</a>
@@ -115,14 +129,17 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><img src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2016-09-13/79369562049_f5a05444d950158f24e9_44.png"></td>
+                        <td>
+                            <img src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2016-09-13/79369562049_f5a05444d950158f24e9_44.png">
+                        </td>
                         <td>John Doe</td>
                         <td class="td-controls">
                             <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-times"></i></a>
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="https://trello-avatars.s3.amazonaws.com/5f93b9cfa2beb599f4d2e1337f639ef2/30.png"></td>
+                        <td><img src="https://trello-avatars.s3.amazonaws.com/5f93b9cfa2beb599f4d2e1337f639ef2/30.png">
+                        </td>
                         <td>John Doe</td>
                         <td class="td-controls">
                             <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-times"></i></a>
