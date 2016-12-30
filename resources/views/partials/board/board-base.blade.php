@@ -19,9 +19,11 @@
     <script src="/js/board/board.js"></script>
     <script src="/js/board/modal.js"></script>
     <script rel="script">
+
         $(document).ready(function() {
             Board.init();
             CardModal.init();
         });
+
     </script>
 @stop
