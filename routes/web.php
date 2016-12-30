@@ -3,6 +3,9 @@
 Route::get('/', function () {
     return view('partials.board.board-base');
 });
+Route::get('/login', function () {
+    return view('partials.auth.login');
+});
 Route::group(['prefix' => 'b'], function () {
     Route::get('/{id}', function () {
         return view('partials.board.board-base');
