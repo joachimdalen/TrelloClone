@@ -138,6 +138,33 @@
   border-radius: 5px;
 }
 
+/* LABEL TEST */
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 50%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #636b6f;
+}
+
+.label-red {
+  background-color: red;
+}
+
+.label-green {
+  background-color: #0bad25;
+}
+
+.label-bg {
+  font-size: 70%;
+}
+
 .list {
   margin: 10px;
   min-width: 270px;
