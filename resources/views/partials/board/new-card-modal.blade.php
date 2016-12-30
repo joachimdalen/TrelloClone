@@ -50,13 +50,13 @@
             <div id="Attachments" class="tab" style="display:none">
                 <span class="sub-title no-italic">Attachments</span>
                 <div class="modal-section-toolbar">
-                   {{-- <input type="text" placeholder="Select a file to upload" class="input-control" disabled>
-                    <a class="tool-button tool-button-sm" href="#"><i class="fa fa-upload"></i></a>--}}
+                    {{-- <input type="text" placeholder="Select a file to upload" class="input-control" disabled>
+                     <a class="tool-button tool-button-sm" href="#"><i class="fa fa-upload"></i></a>--}}
                     <div class="upload-container">
                         <h1>Drop files here or click to upload.</h1>
                     </div>
                 </div>
-                <table class="file-table">
+                <table class="modal-table">
                     <tr>
                         <th></th>
                         <th>Filename</th>
@@ -101,10 +101,42 @@
             </div>
             <div id="DueDate" class="tab" style="display:none">
                 <h2>Due Date</h2>
-                <p>Tokyo is the capital of Japan.</p>
             </div>
             <div id="Members" class="tab" style="display:none">
                 <span class="sub-title no-italic">Card members</span>
+                <div class="modal-section-toolbar">
+                    <input type="text" placeholder="Username" class="input-control">
+                    <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-plus-circle"></i></a>
+                </div>
+                <table class="modal-table user-table">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><img src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2016-09-13/79369562049_f5a05444d950158f24e9_44.png"></td>
+                        <td>John Doe</td>
+                        <td class="td-controls">
+                            <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://trello-avatars.s3.amazonaws.com/5f93b9cfa2beb599f4d2e1337f639ef2/30.png"></td>
+                        <td>John Doe</td>
+                        <td class="td-controls">
+                            <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="http://placehold.it/50x50"></td>
+                        <td>John Doe</td>
+                        <td class="td-controls">
+                            <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+
+                </table>
             </div>
         </div>
         <div class="modal-footer">

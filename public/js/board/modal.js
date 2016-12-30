@@ -40,6 +40,7 @@ var initCardModal = function() {
             ev.target.classList.toggle('checked');
         }
     }, false);
+
 }, CardModal = function () {
     "use strict";
     return {

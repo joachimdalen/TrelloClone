@@ -24,3 +24,61 @@
 .btn-margin {
   padding: 6px;
 }
+.tool-button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #636b6f;
+  background-color: #fff;
+  text-transform: none;
+  overflow: visible;
+  text-decoration: none;
+}
+
+.tool-button:hover {
+  color: #636b6f;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.tool-button-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.button-red {
+  background: #9f0000;
+  color: white;
+}
+
+.button-red:hover {
+  background: rgba(255, 0, 0, 0.35);
+  color: white;
+}
+
+.button-green {
+  background: green;
+  color: white;
+}
+
+.button-green:hover {
+  background: rgba(0, 128, 0, 0.36);
+  color: white;
+}
