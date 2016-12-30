@@ -1,0 +1,81 @@
+Board Database Scheme
+// User management
+users
+	- id
+	- username
+	- email
+	- password_hash
+	- remember_me_token
+	- avatar_id
+	- created_at
+	- updated_at
+teams
+	- id
+	- name
+	- username
+	- short_name
+	- owner
+	- created_at
+	- updated_at
+team_mapping
+	- id
+	- user_id
+	- team_id
+labels
+	- id
+	- tag
+	- color
+	- order
+	- created_at
+	- updated_at
+boards
+	- id
+	- name
+	- slug
+	- owner_or_team_id
+	- color
+	- is_archived
+	- created_at
+	- updated_at
+lists
+	- id
+	- name
+	- slug
+	- order
+	- is_archived
+	- created_at
+	- updated_at
+cards
+	- id
+	- tag
+	- description
+	- assigned_to
+	- order
+	- is_archived
+	- created_at
+	- updated_at
+card_checklists
+	- id
+	- name
+	- is_completed
+card_checklist_options
+	- id
+	- list_id
+	- name
+	- is_completed
+attachments
+	- id
+	- file_id
+	- card_id
+	- user_id
+	- created_at
+	- updated_at
+	
+/*NOT SURE YET*/
+team_roles
+	- id
+	- name
+team_roles_mapping
+	- id
+	- user_id
+	- team_id
