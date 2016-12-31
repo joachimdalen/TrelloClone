@@ -61,8 +61,26 @@ var initBoard = function () {
     function addCards(cardData, parentList) {
         var newCard = parentList.find('#newCard');
         var addedCard = $('\<div class="list-item"><div class="item-card"><div class="card-id-container">' +
-            '#1000\</div><div class="card-label-container"></div><div class="card-content"> ' + cardData.name + '\</div> <div class="card-footer"></div></div></div>')
+            '#1000\</div><div class="card-label-container" id="labelContainer"></div><div class="card-content"> ' + cardData.name + '\</div> <div class="card-footer"></div></div></div>')
             .insertBefore(newCard);
+        $.each(cardData.labels, function (index) {
+            addLabels(cardData.labels[index], addedCard);
+            // console.log(cardData.labels[index]);
+        });
+    }
+
+    function addLabels(labelData, parentCard) {
+        var newLabel = parentCard.find('#labelContainer');
+        var newSpan = $('\<span class="label label-green"></span>').css("background-color", labelData.color)/**/.text(labelData.tag);
+
+        newSpan.appendTo(newLabel);
+        //$("\<span class=\"label\" style=\"background-color:" + labelData.color + ">" + labelData.tag + "\</span>").appendTo(newLabel);
+        /* console.log(labelData.color);
+         console.log(labelData.tag);
+         $('test').appendTo(newLabel);
+         //  $("\<span class=\"label\" style=\"background-color:" + labelData.color + ">" + labelData.tag + "\</span>").appendTo(newLabel);
+         console.log(newLabel);
+         //var addedLabel = $('\<span class="label" style="background-color: ' + labelData.color + '>' + labelData.tag + '\</span>').append(newLabel);*/
     }
 
     $(document).ready(function () {
@@ -76,6 +94,31 @@ var initBoard = function () {
     });
 
     /* Dummy data end*/
+    $("#newCardForm").submit(function (event) {
+        console.log('submitting');
+        // Stop form from submitting normally
+        event.preventDefault();
+
+        // Get some values from elements on the page:
+        var $form = $(this),
+            term = $form.find("input[name='cardName']").val(),
+            url = $form.attr("action");
+
+        // Send the data using post
+        var posting = $.post(url, {cardName: term});
+        console.log('we got to the posting');
+        // Put the results in a div
+        posting.done(function (data) {
+            console.log(data);
+            alert(data.newCardName);
+        });
+    });
+    /*Form handlers*/
+    $("#submitNewCard").on('click', function () {
+        console.log('ok');
+        $("#newCardForm").submit();
+    });
+
 }, Board = function () {
     "use strict";
     return {

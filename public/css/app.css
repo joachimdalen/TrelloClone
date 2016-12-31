@@ -151,6 +151,7 @@
   vertical-align: baseline;
   border-radius: .25em;
   background-color: #636b6f;
+  margin-right: 4px;
 }
 
 .label-red {
@@ -557,6 +558,10 @@
   height: 50px;
   max-height: 50px;
   border-radius: 10px;
+}
+
+.modal-new {
+  width: 20%;
 }
 
 body {

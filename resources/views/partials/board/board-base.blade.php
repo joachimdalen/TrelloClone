@@ -13,6 +13,7 @@
     </div>
     <!-- MODAL START-->
     @include('partials.board.new-card-modal')
+    @include('partials.board.edit-card-modal')
     <!-- MODAL END -->
 @stop
 @section('scripts')
@@ -20,7 +21,7 @@
     <script src="/js/board/modal.js"></script>
     <script rel="script">
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             Board.init();
             CardModal.init();
         });
