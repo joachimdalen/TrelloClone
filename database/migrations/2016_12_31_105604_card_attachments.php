@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Labels extends Migration
+class CardAttachments extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class Labels extends Migration
      */
     public function up()
     {
-        Schema::create('labels', function (Blueprint $table) {
+        Schema::create('card_attachments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tag');
-            $table->string('color');
-         //   $table->integer('order');
-         //   $table->integer('board_id');
+            $table->integer('file_id');
+            $table->string('file_name');
+            $table->string('file_path');
+            $table->integer('card_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -25,7 +25,6 @@ labels
 	- id
 	- tag
 	- color
-	- order
 	- created_at
 	- updated_at
 boards
@@ -63,7 +62,7 @@ card_checklist_options
 	- list_id
 	- name
 	- is_completed
-attachments
+card_attachments
 	- id
 	- file_id
 	- card_id

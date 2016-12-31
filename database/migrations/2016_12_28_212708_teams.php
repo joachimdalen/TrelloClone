@@ -18,7 +18,7 @@ class Teams extends Migration
             $table->string('name');
             $table->string('username');
             $table->string('short_name');
-            $table->integer('order');
+            $table->integer('owner');
             $table->timestamps();
         });
     }
