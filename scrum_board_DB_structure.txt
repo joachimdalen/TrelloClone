@@ -47,6 +47,7 @@ lists
 cards
 	- id
 	- tag
+	- name
 	- description
 	- assigned_to
 	- order

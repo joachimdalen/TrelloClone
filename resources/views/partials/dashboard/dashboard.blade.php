@@ -1,9 +1,9 @@
 @extends('app')
 @section('content')
-    <div class="fill-page-container color-fill">
+    <div class="fill-page-container">
         <div class="dashboard-container">
             <h1 class="sub-header">Test</h1>
-            <table>
+          {{--  <table>
                 <tr>
                     <th>Name</th>
                     <th>Created</th>
@@ -13,14 +13,11 @@
                     <td>MyBoard</td>
                     <td>45 days ago</td>
                     <td>
-                        <a class="btn btn-default btn-sm" href="#"><i class="fa fa-users"></i> Open</a>
-                        <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i> Delete</a>
+                        <a class="tool-button button-green" href="#"><i class="fa fa-users"></i> Open</a>
+                        <a class="tool-button button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
                     </td>
                 </tr>
-            </table>
-            <div class="row">
-
-            </div>
+            </table>--}}
         </div>
     </div>
 @stop

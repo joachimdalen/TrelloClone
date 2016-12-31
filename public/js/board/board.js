@@ -45,6 +45,37 @@ var initBoard = function () {
     $('#side-menu').blur(function () {
         $('#side-menu').hide();
     });
+    /* Dummuy daya*/
+    function addList(listData) {
+        var newList = $('#newList');
+        var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">' + listData.name +
+            '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newModalTrigger">Add new card...' +
+            '\</a></div></div></div></div>')
+            .insertBefore(newList);
+        $.each(listData.cards, function (index) {
+            addCards(listData.cards[index], addedList);
+        });
+
+    }
+
+    function addCards(cardData, parentList) {
+        var newCard = parentList.find('#newCard');
+        var addedCard = $('\<div class="list-item"><div class="item-card"><div class="card-id-container">' +
+            '#1000\</div><div class="card-label-container"></div><div class="card-content"> ' + cardData.name + '\</div> <div class="card-footer"></div></div></div>')
+            .insertBefore(newCard);
+    }
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:8001/v1/boards/dummy"
+        }).then(function (data) {
+            $.each(data.lists, function (index) {
+                addList(data.lists[index]);
+            });
+        });
+    });
+
+    /* Dummy data end*/
 }, Board = function () {
     "use strict";
     return {

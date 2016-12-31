@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="list-item">
-                    <div class="item-card">
+                    <div class="item-card border-orange">
                         <div class="card-id-container">#1000</div>
                         <div class="card-label-container">
                             <span class="label label-red">Default</span>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="new-card">
-                    <a>Add new card...</a>
+                    <a id="newModalTrigger">Add new card...</a>
                 </div>
 
 

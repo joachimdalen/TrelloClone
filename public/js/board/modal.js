@@ -19,9 +19,13 @@ var initCardModal = function() {
     };
 
 // When the user clicks the button, open the modal
-    btn.onclick = function () {
+/*    btn.onclick = function () {
         modal.style.display = "block";
-    };
+    };*/
+    $(document).on('click', '#newModalTrigger', function () {
+        modal.style.display = "block";
+        console.log('hmmmmmmmm');
+    });
 
 // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
