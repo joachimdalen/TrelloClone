@@ -5,12 +5,18 @@
             <span class="close">&times;</span>
             <input id="card-edit-field" type="text" placeholder="Title here" class="input-control"
                    style="display: none">
-            <span id="card-edit-label">Card title</span>
+            {{--
+            Make this button be inline with with the input control
+          <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-check"></i></a>
+          --}}
+            <span id="card-edit-label" class="input-control edit-label">Card title</span>
+
             <span class="sub-title">in This is my new list</span>
+
         </div>
         <div class="modal-toolbar modal-toolbar-status">
             <span><i class="fa fa-clock-o"></i> 25/12/2016</span>
-            <div class="modal-labels">
+            <div class="modal-labels" id="modal-labels">
                 <span class="label label-bg label-red">Default</span> <span class="label label-bg label-primary">Primary</span><span class="label label-bg label-green">Success</span>
                 <span class="label label-bg label-red">Default</span>
                 <span class="label label-bg label-primary">Primary</span>
@@ -58,7 +64,15 @@
             </div>
 
             <div id="Checklists" class="tab" style="display:none">
-                <span class="sub-title no-italic">Labels</span>
+                <span class="sub-title no-italic">Checklist</span>
+                <div class="modal-section-toolbar">
+                    <input type="text" placeholder="Name" class="input-control">
+                    <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-plus-circle"></i></a>
+                </div>
+                <div class="modal-checklist">
+
+                </div>
+                <span>No lists so far, why don't you add one?</span>
 
             </div>
             <div id="Attachments" class="tab" style="display:none">

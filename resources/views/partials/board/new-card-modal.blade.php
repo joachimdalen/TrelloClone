@@ -5,7 +5,7 @@
             <div class="modal-header">
                 <span class="close">&times;</span>
                 <input name="cardName" id="card-new-input" type="text" placeholder="Title here" class="input-control">
-                <span class="sub-title">in This is my new list</span>
+                <span class="sub-title" id="card-new-inlist">in This is my new list</span>
             </div>
             <div class="modal-footer">
                 <a class="tool-button tool-button-sm button-red" id="closeModal"><i class="fa fa-ban"></i> Cancel</a>

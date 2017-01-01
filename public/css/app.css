@@ -187,6 +187,7 @@
   text-align: left;
   margin-left: 5px;
   color: black;
+  padding-bottom: 5px;
 }
 
 .list-container {
@@ -353,6 +354,7 @@
   padding: 0;
   border: 1px solid #888;
   width: 35%;
+  min-width: 650px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -562,6 +564,13 @@
 
 .modal-new {
   width: 20%;
+  min-width: 400px !important;
+}
+
+.edit-label {
+  width: calc(100% - 34px);
+  display: -webkit-box;
+  display: flex;
 }
 
 body {
