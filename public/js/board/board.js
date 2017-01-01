@@ -49,7 +49,7 @@ var initBoard = function () {
     function addList(listData) {
         var newList = $('#newList');
         var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">' + listData.name +
-            '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newModalTrigger" data-listID="'+ listData.slug +'">Add new card...' +
+            '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newModalTrigger" data-listID="' + listData.slug + '">Add new card...' +
             '\</a></div></div></div></div>')
             .insertBefore(newList);
         $.each(listData.cards, function (index) {
@@ -108,6 +108,8 @@ var initBoard = function () {
         var posting = $.post(url, {cardName: term})
                 .done(function (data) {
                     alert("second success " + data.newCardName);
+                    //var modal = document.getElementById('newCardModal');
+                    var modal = document.getElementById('newCardModal').style.display = "none";
                 })
                 .fail(function () {
                     alert("error");
@@ -128,8 +130,6 @@ var initBoard = function () {
         console.log('ok');
         $("#newCardForm").submit();
     });
-
-
 
 
 }, Board = function () {

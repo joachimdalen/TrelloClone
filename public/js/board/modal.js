@@ -69,7 +69,7 @@ var initCardModal = function () {
             }
             else {
                 //remove labels from header here
-                alert('no');
+                alert('remove labels from header here');
             }
         }
     }, false);
