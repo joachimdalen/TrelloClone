@@ -3,7 +3,15 @@
     <div class="fill-page-container dashboard-base">
         <h1 class="sub-header sub-header-dark">Your and your teams boards</h1>
         <div class="dashboard-container flexcontainer">
-
+            <div class="dashboard-card" id="newBoard">
+                <div class="dcard-title">
+                    <span>Create new board</span>
+                    <img src="/img/add.png">
+                </div>
+                <div class="dcard-content">
+                    <p class="sub-header no-italic sub-header-dark">Click me to create a new board!</p>
+                </div>
+            </div>
             <div class="dashboard-card">
                 <div class="dcard-title">
                     <span>Task list creation</span>

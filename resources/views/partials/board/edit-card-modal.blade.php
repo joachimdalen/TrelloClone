@@ -17,7 +17,8 @@
         <div class="modal-toolbar modal-toolbar-status">
             <span><i class="fa fa-clock-o"></i> 25/12/2016</span>
             <div class="modal-labels" id="modal-labels">
-                <span class="label label-bg label-red">Default</span> <span class="label label-bg label-primary">Primary</span><span class="label label-bg label-green">Success</span>
+                <span class="label label-bg label-red">Default</span> <span
+                        class="label label-bg label-primary">Primary</span><span class="label label-bg label-green">Success</span>
                 <span class="label label-bg label-red">Default</span>
                 <span class="label label-bg label-primary">Primary</span>
                 <span class="label label-bg label-green">Success</span>
@@ -39,6 +40,8 @@
                         class="fa fa-calendar"></i> Due Date</a>
             <a class="tool-button tool-button-sm" href="javascript:void(0)" onclick="openTab('Members')"><i
                         class="fa fa-users"></i> Members</a>
+            <a class="tool-button tool-button-sm" href="javascript:void(0)" onclick="openTab('Other')"><i
+                        class="fa fa-exclamation"></i> Other</a>
             <!-- <a class="btn btn-default btn-sm" href="#"><i class="fa fa-users"></i> Members</a>-->
         </div>
         <div class="modal-body">
@@ -171,10 +174,15 @@
 
                 </table>
             </div>
+            <div id="Other" class="tab">
+                <span class="sub-title no-italic">Other</span>
+            </div>
         </div>
         <div class="modal-footer">
             <a class="tool-button tool-button-sm " id="closeModal"><i class="fa fa-ban"></i> Cancel</a>
+            Check to confirm deletion<input type="checkbox" style="color: black;">
             <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
+            <a class="tool-button tool-button-sm" href="#"><i class="fa fa-archive"></i> Archive</a>
             <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-save"></i> Save</a>
         </div>
     </div>

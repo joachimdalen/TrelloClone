@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="list-item">
-                    <div class="item-card border-orange">
+                    <div class="item-card border-orange old-texture">
                         <div class="card-id-container">#1000</div>
                         <div class="card-label-container">
                             <span class="label label-red">Default</span>

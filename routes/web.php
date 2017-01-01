@@ -12,7 +12,7 @@ Route::group(['prefix' => 'b'], function () {
     });
 });
 Route::group(['prefix' => 'u'], function () {
-    Route::get('/dashboard', function () {
+    Route::get('/boards', function () {
         return view('partials.dashboard.dashboard');
     });
     Route::get('/account', function () {

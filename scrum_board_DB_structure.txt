@@ -34,6 +34,7 @@ boards
 	- owner_or_team_id
 	- color
 	- is_archived
+	- board_avatar
 	- created_at
 	- updated_at
 lists
