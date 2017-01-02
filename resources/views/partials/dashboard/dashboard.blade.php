@@ -3,7 +3,7 @@
     <div class="fill-page-container dashboard-base">
         <h1 class="sub-header sub-header-dark">Your and your teams boards</h1>
         <div class="dashboard-container flexcontainer">
-            <div class="dashboard-card" id="newBoard">
+            <div class="dashboard-card" id="newBoardTrigger">
                 <div class="dcard-title">
                     <span>Create new board</span>
                     <img src="/img/add.png">
@@ -12,13 +12,14 @@
                     <p class="sub-header no-italic sub-header-dark">Click me to create a new board!</p>
                 </div>
             </div>
-            <div class="dashboard-card">
+            <div class="dashboard-card" id="archive">
                 <div class="dcard-title">
-                    <span>Task list creation</span>
-                    <img src="/img/board.png">
+                    <span>Archive</span>
+                    <img src="/img/archive.png">
                 </div>
                 <div class="dcard-content">
-                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus issues</p>
+                    <p class="sub-header no-italic sub-header-dark">All your archived items end up in here. From here
+                        you can also restore the items if needed.</p>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -27,7 +28,8 @@
                     <img src="/img/board.png">
                 </div>
                 <div class="dcard-content">
-                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus issues</p>
+                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus
+                        issues</p>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -36,7 +38,8 @@
                     <img src="/img/board.png">
                 </div>
                 <div class="dcard-content">
-                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus issues</p>
+                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus
+                        issues</p>
                 </div>
             </div>
             <div class="dashboard-card">
@@ -45,386 +48,30 @@
                     <img src="/img/board.png">
                 </div>
                 <div class="dcard-content">
-                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus issues</p>
+                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus
+                        issues</p>
                 </div>
             </div>
-            {{-- <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-             <div class="dashboard-card">
-                 <div class="dcard-title">
-                     <span>My Board</span>
-                     <img src="http://placehold.it/120x120">
-                 </div>
-                 <div class="dcard-content">
-                     <table>
-                         <tr>
-                             <td><i class="fa fa-user"></i></td>
-                             <td>Joachim Dalen</td>
-                             <td><i class="fa fa-calendar"></i></td>
-                             <td>01.01.2017</td>
-                         </tr>
-                         <tr>
-                             <td><i class="fa fa-users"></i></td>
-                             <td>25</td>
-                             <td><i class="fa fa-list"></i></td>
-                             <td>255</td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>--}}
-
-
-            {{--  <table>
-                  <tr>
-                      <th>Name</th>
-                      <th>Created</th>
-                      <th></th>
-                  </tr>
-                  <tr>
-                      <td>MyBoard</td>
-                      <td>45 days ago</td>
-                      <td>
-                          <a class="tool-button button-green" href="#"><i class="fa fa-users"></i> Open</a>
-                          <a class="tool-button button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
-                      </td>
-                  </tr>
-              </table>--}}
+            <div class="dashboard-card">
+                <div class="dcard-title">
+                    <span>Task list creation</span>
+                    <img src="/img/board.png">
+                </div>
+                <div class="dcard-content">
+                    <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus
+                        issues</p>
+                </div>
+            </div>
         </div>
     </div>
+    @include('partials.modals.new-board-modal')
 @stop
 @section('scripts')
     <script src="/js/dashboard/dashboard.js"></script>
+    <script src="/js/board/modal.js"></script>
     <script rel="script">
         $(document).ready(function () {
-
+            CardModal.register('newBoardModal', 'newBoardTrigger', ["closeNewBoardSpan","closeNewBoardButton"])
         });
     </script>
 @stop

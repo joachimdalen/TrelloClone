@@ -62,7 +62,7 @@ var initCardModal = function () {
         if (ev.target.tagName === 'LI') {
             ev.target.classList.toggle('checked');
             var labelContainer = $('#modal-labels');
-            if(ev.target.classList.contains('checked')){
+            if (ev.target.classList.contains('checked')) {
                 //Add label to header here
                 var newSpan = $('\<span class="label label-bg label-red"></span>').text('label label');
                 newSpan.appendTo(labelContainer);
@@ -74,11 +74,68 @@ var initCardModal = function () {
         }
     }, false);
 
-}, CardModal = function () {
-    "use strict";
-    return {
-        init: function () {
-            initCardModal()
+};
+/*var registerModal = function (modalName, modalTrigger, modalCancel) {
+ var modal = document.getElementById(modalName);
+ var openButton = document.getElementById(modalTrigger);
+ var cancelButton = document.getElementById(modalCancel);
+ console.log(modal);
+ console.log(openButton);
+ console.log(cancelButton);
+ openButton.onclick = function () {
+ modal.style.display = "block";
+ };
+ cancelButton.onclick = function () {
+ modal.style.display = "none";
+ };
+ /!*$(document).on('click', openButton, function () {
+ // console.log(modal.style.display);
+ // $(modal).css({ display: "block" });
+ console.log('block');
+ modal.style.display = "block";
+ return false;
+ });
+ $(document).on('click', cancelButton, function () {
+ console.log('none');
+ modal.style.display = "none";
+ return false;
+ });*!/
+ },*/
+var registerModal = function (modalName, modalTrigger, modalCancel) {
+        var modal = document.getElementById(modalName);
+        var openButton = document.getElementById(modalTrigger);
+        openButton.onclick = function () {
+            modal.style.display = "block";
+        };
+        var cancelLength = modalCancel.length;
+        for (var i = 0; i < cancelLength; i++) {
+            var cancelButton = document.getElementById(modalCancel[i]);
+            cancelButton.onclick = function () {
+                modal.style.display = "none";
+            };
         }
-    }
-}();
+
+        /*$(document).on('click', openButton, function () {
+         // console.log(modal.style.display);
+         // $(modal).css({ display: "block" });
+         console.log('block');
+         modal.style.display = "block";
+         return false;
+         });
+         $(document).on('click', cancelButton, function () {
+         console.log('none');
+         modal.style.display = "none";
+         return false;
+         });*/
+    },
+    CardModal = function () {
+        "use strict";
+        return {
+            init: function () {
+                initCardModal()
+            },
+            register: function (modalName, modalTrigger, modalCancel) {
+                registerModal(modalName, modalTrigger, modalCancel);
+            }
+        }
+    }();

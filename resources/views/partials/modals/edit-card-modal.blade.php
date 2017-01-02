@@ -16,6 +16,8 @@
         </div>
         <div class="modal-toolbar modal-toolbar-status">
             <span><i class="fa fa-clock-o"></i> 25/12/2016</span>
+        </div>
+        <div class="modal-toolbar modal-toolbar-status">
             <div class="modal-labels" id="modal-labels">
                 <span class="label label-bg label-red">Default</span> <span
                         class="label label-bg label-primary">Primary</span><span class="label label-bg label-green">Success</span>
@@ -174,14 +176,35 @@
 
                 </table>
             </div>
-            <div id="Other" class="tab">
+            <div id="Other" class="tab" style="display:none">
                 <span class="sub-title no-italic">Other</span>
+                <div class="modal-card-container">
+                 <div class="modal-card">
+                     <span>Delete</span>
+                     <p>Deleting a card is a irreversible action. If you want to hide a card from the list press "Archive"
+                         and it can be retrieved from the archive at a later point. </p>
+                     <input type="checkbox" id="confirmDelete">
+                     <label for="confirmDelete">Check to confirm deletion</label>
+                     <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
+                 </div>
+                    <div class="modal-card">
+                        <span>Delete</span>
+                        <p>Deleting a card is a irreversible action. If you want to hide a card from the list press "Archive"
+                            and it can be retrieved from the archive at a later point. </p>
+                        <input type="checkbox" id="confirmDelete">
+                        <label for="confirmDelete">Check to confirm deletion</label>
+                        <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
+                    </div>
+                   <!--
+                            Some clever way to display more options?
+                             - Card layout with image and description for each action?
+                             - List (This would only mean a short description
+                   -->
+                </div>
             </div>
         </div>
         <div class="modal-footer">
             <a class="tool-button tool-button-sm " id="closeModal"><i class="fa fa-ban"></i> Cancel</a>
-            Check to confirm deletion<input type="checkbox" style="color: black;">
-            <a class="tool-button tool-button-sm button-red" href="#"><i class="fa fa-trash"></i> Delete</a>
             <a class="tool-button tool-button-sm" href="#"><i class="fa fa-archive"></i> Archive</a>
             <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-save"></i> Save</a>
         </div>

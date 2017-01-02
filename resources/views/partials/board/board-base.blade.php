@@ -12,8 +12,8 @@
         </div>
     </div>
     <!-- MODAL START-->
-    @include('partials.board.new-card-modal')
-    @include('partials.board.edit-card-modal')
+    @include('partials.modals.new-card-modal')
+    @include('partials.modals.edit-card-modal')
     <!-- MODAL END -->
 @stop
 @section('scripts')
