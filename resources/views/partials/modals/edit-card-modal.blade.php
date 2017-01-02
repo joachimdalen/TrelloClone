@@ -2,7 +2,7 @@
     <!-- Modal content -->
     <div class="modal-content">
         <div class="modal-header">
-            <span class="close">&times;</span>
+            <span class="close" id="closeEditCardSpan">&times;</span>
             <input id="card-edit-field" type="text" placeholder="Title here" class="input-control"
                    style="display: none">
             {{--
@@ -204,7 +204,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="tool-button tool-button-sm " id="closeModal"><i class="fa fa-ban"></i> Cancel</a>
+            <a class="tool-button tool-button-sm " id="closeEditCardButton"><i class="fa fa-ban"></i> Cancel</a>
             <a class="tool-button tool-button-sm" href="#"><i class="fa fa-archive"></i> Archive</a>
             <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-save"></i> Save</a>
         </div>

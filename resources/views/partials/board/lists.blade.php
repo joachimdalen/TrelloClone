@@ -3,7 +3,7 @@
             <div class="list-header">This is my list</div>
             <div class="list-item-container">
                 <div class="list-item">
-                    <div class="item-card">
+                    <div class="item-card" id="editCardTrigger">
                         <div class="card-id-container">#1000</div>
 
                         <div class="card-label-container">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="list-item">
-                    <div class="item-card border-orange">
+                    <div class="item-card border-orange" id="editCardTrigger">
                         <div class="card-id-container">#1000</div>
                         <div class="card-label-container">
                             <span class="label label-red">Default</span>
@@ -60,7 +60,7 @@
         <div class="list-container">
             <div class="list-header">This is my list</div>
             <div class="list-item-container">
-                <div class="list-item">
+                <div class="list-item" id="editCardTrigger">
                     <div class="item-card">
                         <div class="card-id-container">#1000</div>
                         <div class="card-label-container"></div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="new-card">
-                    <a id="newModalTrigger">Add new card...</a>
+                    <a id="newCardTrigger">Add new card...</a>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
             <div class="list-header">This is my list</div>
             <div class="list-item-container">
                 <div class="new-card">
-                    <a id="newModalTrigger">Add new card...</a>
+                    <a id="newCardTrigger">Add new card...</a>
                 </div>
             </div>
         </div>

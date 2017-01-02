@@ -60,7 +60,7 @@ var initBoard = function () {
 
     function addCards(cardData, parentList) {
         var newCard = parentList.find('#newCard');
-        var addedCard = $('\<div class="list-item" data-cardID="' + cardData.tag + '"\><div class="item-card"><div class="card-id-container">' +
+        var addedCard = $('\<div class="list-item" data-cardID="' + cardData.tag + '"\><div class="item-card" id="editCardTrigger"><div class="card-id-container">' +
             '#1000\</div><div class="card-label-container" id="labelContainer"></div><div class="card-content"> ' + cardData.name + '\</div> <div class="card-footer"></div></div></div>')
             .insertBefore(newCard);
         $.each(cardData.labels, function (index) {

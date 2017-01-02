@@ -24,6 +24,14 @@
         $(document).ready(function () {
             Board.init();
             CardModal.init();
+            //closeEditCardSpan - closeEditCardButton
+            CardModal.register('editCardModal', 'editCardTrigger', ["closeEditCardSpan", "closeEditCardButton"]);
+           CardModal.register('newCardModal', 'newCardTrigger', ["closeNewCardSpan","closeNewCardButton"]);
+            /* CardModal.open('editCardModal','editCardTrigger');
+             CardModal.close('editCardModal','closeEditCardSpan');
+             CardModal.close('editCardModal','closeEditCardButton');*/
+
+
         });
 
     </script>
