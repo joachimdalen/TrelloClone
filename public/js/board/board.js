@@ -4,26 +4,35 @@
 var initBoard = function () {
     console.log('Loaded board.js');
     $(".list-item").click(function () {
-        /*    var newCard = $('#newCard');
-         var listItem = document.createElement('div');
-         listItem.clas*/
-
+      /*  var list = document.createElement('div').classList.add('list');
+        var listContainer = document.createElement('div').classList.add('list-container');
+        var listHeader = document.createElement('div').classList.add('list-header');
+        var listItemContainer = document.createElement('div').classList.add('list-item-container');
+        var newCard = document.createElement('div').classList.add('new-card');
+        var trigger = document.createElement('a').setAttribute('id', 'newModalTrigger');
+//appendChild
+        list.appendChild(listContainer);
+        listContainer.appendChild(listHeader);
+        listContainer.appendChild(listItemContainer);
+        listItemContainer.appendChild(newCard);
+        listItemContainer.appendChild(trigger);
+        document.createElement('div').classList.add('list').appendChild(document.createElement('div').classList.add('list-container'))*/
     });
     $(".new-list").on('click', function () {
         var newList = $('#newList');
         var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">This is my list' +
-            '\</div><div class="list-item-container"><div class="new-card"><a id="newModalTrigger">Add new card...' +
+            '\</div><div class="list-item-container"><div class="new-card"><a id="newCardTrigger">Add new card...' +
             '\</a></div></div></div></div>')
             .insertBefore(newList);
     });
-    $(document).on('click', '.new-card', function () {
+    /*$(document).on('click', '.new-card', function () {
         var newCard = $('#newCard');
         var addedCard = $('\<div class="list-item"><div class="item-card"><div class="card-id-container">' +
             '#1000\</div><div class="card-label-container"></div><div class="card-content"> ' +
             'Fix divs in container to lign up with each other. \</div> <div class="card-footer"></div></div></div>')
             .insertBefore(this);
         console.log('ehhh...');
-    });
+    });*/
     $("#show-menu").on('click', function () {
         var menu = $('#side-menu');
         var menuButton = $('#show-menu');
@@ -49,7 +58,7 @@ var initBoard = function () {
     function addList(listData) {
         var newList = $('#newList');
         var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">' + listData.name +
-            '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newModalTrigger" data-listID="' + listData.slug + '">Add new card...' +
+            '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newCardTrigger" data-listID="' + listData.slug + '">Add new card...' +
             '\</a></div></div></div></div>')
             .insertBefore(newList);
         $.each(listData.cards, function (index) {
@@ -90,7 +99,8 @@ var initBoard = function () {
             $.each(data.lists, function (index) {
                 addList(data.lists[index]);
             });
-        });
+            console.log('added dummy board');
+        })
     });
 
     /* Dummy data end*/

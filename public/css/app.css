@@ -410,6 +410,7 @@
 
 .modal-header input[type=text] {
   width: calc(100% - 34px);
+  font-family: "Raleway", sans-serif !important;
 }
 
 .sub-title {
@@ -522,6 +523,7 @@
 
 .modal-section-toolbar input[type=text] {
   width: 92%;
+  font-family: "Raleway", sans-serif !important;
 }
 
 .modal-table {
@@ -604,6 +606,7 @@
 .modal-card input[type=checkbox] {
   color: black;
   float: left;
+  font-family: "Raleway", sans-serif !important;
 }
 
 .modal-card label {
@@ -671,6 +674,8 @@ body {
 .user-section img {
   height: 25px;
   width: 25px;
+  padding: 2px;
+  border-radius: 50%;
 }
 
 .user-section span {

@@ -42,7 +42,7 @@
                         issues</p>
                 </div>
             </div>
-            <div class="dashboard-card">
+            <div class="dashboard-card" href="">
                 <div class="dcard-title">
                     <span>Task list creation</span>
                     <img src="/img/board.png">
@@ -71,7 +71,9 @@
     <script src="/js/board/modal.js"></script>
     <script rel="script">
         $(document).ready(function () {
-            CardModal.register('newBoardModal', 'newBoardTrigger', ["closeNewBoardSpan","closeNewBoardButton"])
+            CardModal.registerModal('newBoardModal', 'newBoardTrigger', ["closeNewBoardSpan","closeNewBoardButton"]);
+        //    ControlRegistry.labelToInput('card-edit-label', 'card-edit-field', true, true);
+            Dashboard.init();
         });
     </script>
 @stop

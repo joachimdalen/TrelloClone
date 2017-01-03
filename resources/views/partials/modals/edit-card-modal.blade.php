@@ -56,8 +56,8 @@
 
             <div id="Labels" class="tab" style="display:none">
                 <span class="sub-title no-italic">Labels</span>
-                <ul class="label-list">
-                    <li class="label-select">Frontend</li>
+                <ul class="label-list" id="labelList">
+                    <li class="label-select" data-tag="f5g8g42">Frontend</li>
                     <li class="label-select">Backend</li>
                     <li class="label-select">Frontend</li>
                     <li class="label-select">Backend</li>

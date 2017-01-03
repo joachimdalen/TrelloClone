@@ -19,19 +19,17 @@
 @section('scripts')
     <script src="/js/board/board.js"></script>
     <script src="/js/board/modal.js"></script>
+    <script src="/js/global/controlregistry.js"></script>
     <script rel="script">
 
         $(document).ready(function () {
             Board.init();
             CardModal.init();
             //closeEditCardSpan - closeEditCardButton
-            CardModal.register('editCardModal', 'editCardTrigger', ["closeEditCardSpan", "closeEditCardButton"]);
-           CardModal.register('newCardModal', 'newCardTrigger', ["closeNewCardSpan","closeNewCardButton"]);
-            /* CardModal.open('editCardModal','editCardTrigger');
-             CardModal.close('editCardModal','closeEditCardSpan');
-             CardModal.close('editCardModal','closeEditCardButton');*/
-
-
+            CardModal.registerModal('editCardModal', 'editCardTrigger', ["closeEditCardSpan", "closeEditCardButton"]);
+            CardModal.registerModal('newCardModal', 'newCardTrigger', ["closeNewCardSpan", "closeNewCardButton"]);
+            CardModal.registerLabelList('labelList');
+            ControlRegistry.labelToInput('card-edit-label', 'card-edit-field', true, true);
         });
 
     </script>
