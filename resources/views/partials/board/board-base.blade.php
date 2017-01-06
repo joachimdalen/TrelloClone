@@ -20,6 +20,7 @@
     <script src="/js/board/board.js"></script>
     <script src="/js/board/modal.js"></script>
     <script src="/js/global/controlregistry.js"></script>
+    <script src="/js/global/toast.js"></script>
     <script rel="script">
 
         $(document).ready(function () {
@@ -30,6 +31,8 @@
             CardModal.registerModal('newCardModal', 'newCardTrigger', ["closeNewCardSpan", "closeNewCardButton"]);
             CardModal.registerLabelList('labelList');
             ControlRegistry.labelToInput('card-edit-label', 'card-edit-field', true, true);
+            ControlRegistry.labelToInput('board-title-label', 'board-title-field', true, true);
+            ControlRegistry.copyToInput('board-title-label', 'board-title-field')
         });
 
     </script>

@@ -14,8 +14,12 @@
             <span class="sub-title">in This is my new list</span>
 
         </div>
-        <div class="modal-toolbar modal-toolbar-status">
-            <span><i class="fa fa-clock-o"></i> 25/12/2016</span>
+        <div class="modal-toolbar modal-toolbar-status modal-toolbar-dates">
+            <span class="modal-toolbar-date" style="display: none; color:green;" id="card-created"><i class="fa fa-clock-o"></i> Created: 25/12/2016 14:33</span>
+            <span class="modal-toolbar-date" id="card-age" style="color:green;"><i class="fa fa-calendar"></i> Age: 64 Days</span>
+            <span class="modal-toolbar-date" id="card-updated" style="color:orange;"><i class="fa fa-clock-o"></i> Updated: 25/12/2016 14:33</span>
+            <span class="modal-toolbar-date" id="card-due" style="color:red;"><i class="fa fa-clock-o"></i> Due: 25/12/2016 14:33</span>
+
         </div>
         <div class="modal-toolbar modal-toolbar-status">
             <div class="modal-labels" id="modal-labels">
@@ -219,4 +223,5 @@
         }
         document.getElementById(tabName).style.display = "block";
     }
+
 </script>

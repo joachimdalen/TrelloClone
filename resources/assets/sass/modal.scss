@@ -277,3 +277,21 @@ $font: 'Raleway', sans-serif !important;
     margin-left: 5px;
   }
 }
+
+.modal-card-container {
+  display: flex;
+  .modal-card {
+    margin: 2px;
+  }
+}
+
+.modal-toolbar-dates {
+  display: table;
+  width: 95%;
+  table-layout: fixed;
+}
+
+.modal-toolbar-date {
+  display: table-cell;
+  text-align: center;
+}

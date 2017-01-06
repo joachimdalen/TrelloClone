@@ -1,4 +1,4 @@
-{{--    <div class="list">
+    <div class="list">
         <div class="list-container">
             <div class="list-header">This is my list</div>
             <div class="list-item-container">
@@ -21,11 +21,11 @@
                             card-members: avatar icons for members of card
                             -->
                             <div class="card-modules"></div>
-                            --}}{{-- <div class="card-members">
+                             <div class="card-members">
                                  <img src="http://placehold.it/35x35">
                                  <img src="http://placehold.it/35x35">
                                  <img src="http://placehold.it/35x35">
-                             </div>--}}{{--
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-    </div>--}}
+    </div>
     <div class="list new-list" id="newList">
         <a>Add new list...</a>
     </div>

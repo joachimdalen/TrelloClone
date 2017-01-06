@@ -2,7 +2,7 @@
 @section('content')
     <div class="fill-page-container dashboard-base">
         <h1 class="sub-header sub-header-dark">Your and your teams boards</h1>
-        <div class="dashboard-container flexcontainer">
+        <div class="dashboard-container flexcontainer" id="dashboard-container">
             <div class="dashboard-card" id="newBoardTrigger">
                 <div class="dcard-title">
                     <span>Create new board</span>
@@ -22,7 +22,7 @@
                         you can also restore the items if needed.</p>
                 </div>
             </div>
-            <div class="dashboard-card">
+            {{--<div class="dashboard-card">
                 <div class="dcard-title">
                     <span>Task list creation</span>
                     <img src="/img/board.png">
@@ -61,7 +61,7 @@
                     <p class="sub-header no-italic sub-header-dark">Projects related to the creation of TaskList, plus
                         issues</p>
                 </div>
-            </div>
+            </div>--}}
         </div>
     </div>
     @include('partials.modals.new-board-modal')
