@@ -20,7 +20,7 @@ class CreateBoardsTable extends Migration
             $table->string('description');
             $table->integer('owner_or_team_id');
             $table->string('color');
-            $table->integer('card_count_total');
+            $table->integer('card_count_total')->default('0');;
             $table->boolean('is_archived')->default('0');
             $table->timestamps();
         });

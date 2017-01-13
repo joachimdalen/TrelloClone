@@ -1,8 +1,8 @@
 <div class="site-header">
     <span>TaskList</span>
     <div class="user-section">
-        <img src="http://placehold.it/20x20">
-        <span>JD</span>
+        <img src="{{ Auth::user()->avatar }}">
+        <span>{{ Auth::user()->name }}</span>
         <i class="fa fa-arrow-circle-down"id="profileMenu"></i>
     </div>
 </div>

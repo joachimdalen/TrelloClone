@@ -12,11 +12,11 @@ var initDashboard = function () {
     $(document).ready(function () {
         //   console.log(window.location.pathname);
         $.ajax({
-            url: "http://localhost:8001/v1/boards/1234/short"
+            url: "http://localhost:8000/boards/short"
             //  body: "{userToken:thisismytoken,userId:1234}"
         }).then(function (data) {
-            $.each(data.boards, function (index) {
-                addBoards(data.boards[index]);
+            $.each(data, function (index) {
+                addBoards(data[index]);
             });
             console.log(data);
 
@@ -24,7 +24,7 @@ var initDashboard = function () {
     });
     function addBoards(data) {
         var container = $('#dashboard-container');
-        var addedCard = $('\<div class="dashboard-card"' + " onclick=location.href='/b/" + data.slug + "';" + '\ style="cursor: pointer;"><div class="dcard-title"><span>' + data.name + '\</span>' +
+        var addedCard = $('\<div class="dashboard-card"' + " onclick=location.href='/b/" + data.board_id + "';" + '\ style="cursor: pointer;"><div class="dcard-title"><span>' + data.name + '\</span>' +
             '\<img src="/img/board.png"></div><div class="dcard-content"><p class="sub-header no-italic sub-header-dark">' + data.description + '\</p></div></div>')
             .appendTo(container);
     }
@@ -35,12 +35,12 @@ var initDashboard = function () {
         event.preventDefault();
         // Get some values from elements on the page:
         var $form = $(this),
-            boardName = $form.find("input[name='boardName']").val(),
-            boardDescription = $form.find("textarea[name='boardDescription']").val(),
+            name = $form.find("input[name='name']").val(),
+           description = $form.find("textarea[name='description']").val(),
             url = $form.attr("action");
 
         // Send the data using post
-        var posting = $.post(url, {boardName: boardName, boardDescription: boardDescription, userToken: 'thisismytoken'})
+        var posting = $.post(url, {name: name, description: description})
                 .done(function (data) {
                   /*  alert("second success " + data);
                     console.log(data);*/
@@ -52,7 +52,7 @@ var initDashboard = function () {
                 })
                 .fail(function (data) {
                     alert("error");
-                 //   console.log(data);
+                   console.log(data);
                 })
             /* .always(function () {
              alert("finished");

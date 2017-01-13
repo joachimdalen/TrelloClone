@@ -97,7 +97,7 @@ var initBoard = function () {
 
         $(document).ready(function () {
             $.ajax({
-                url: "http://localhost:8001/v1/boards/dummy"
+                url: "http://localhost:8000/boards/short"
             }).then(function (data) {
                 $.each(data.lists, function (index) {
                     addList(data.lists[index]);

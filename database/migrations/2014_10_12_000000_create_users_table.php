@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->string('avatar');
+            $table->string('avatar')->default('/img/user.png');
             $table->string('password');
            // $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->rememberToken();
