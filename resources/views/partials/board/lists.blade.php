@@ -1,6 +1,10 @@
     <div class="list">
         <div class="list-container">
-            <div class="list-header">This is my list</div>
+            <div class="list-header">
+            <a id="list-header-label">This is my list</a>
+                <input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;">
+            </div>
+
             <div class="list-item-container">
                 <div class="list-item">
                     <div class="item-card" id="editCardTrigger">
@@ -42,9 +46,7 @@
                             Fix divs in container to lign up with each other.
                         </div>
                         <div class="card-footer">
-
                         </div>
-
                     </div>
                 </div>
 
@@ -58,7 +60,11 @@
     </div>
     <div class="list">
         <div class="list-container">
-            <div class="list-header">This is my list</div>
+            <div class="list-header">
+                <a id="list-header-label">This is my list</a>
+                <input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;">
+            </div>
+
             <div class="list-item-container">
                 <div class="list-item" id="editCardTrigger">
                     <div class="item-card">

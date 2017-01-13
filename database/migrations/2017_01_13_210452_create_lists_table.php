@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Cards extends Migration
+class CreateListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class Cards extends Migration
      */
     public function up()
     {
-        Schema::create('cards', function (Blueprint $table) {
+        Schema::create('lists', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('list_id')->unique();
             $table->string('name');
-            $table->string('tag')->unique();
-            $table->longText('description');
-            $table->integer('assigned_to');
             $table->integer('order');
             $table->boolean('is_archived')->default('0');
             $table->timestamps();
@@ -32,6 +30,6 @@ class Cards extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('lists');
     }
 }

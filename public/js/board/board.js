@@ -20,8 +20,10 @@ var initBoard = function () {
         });
         $(".new-list").on('click', function () {
             var newList = $('#newList');
-            var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">This is my list' +
-                '\</div><div class="list-item-container"><div class="new-card"><a id="newCardTrigger">Add new card...' +
+            //<div class="list-header"><a id="list-header-label">This is my list</a><input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>
+            var addedList = $('\<div class="list"><div class="list-container"><div class="list-header"><a id="list-header-label">This is my list</a>' +
+                '\<input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>' +
+                '\<div class="list-item-container"><div class="new-card"><a id="newCardTrigger">Add new card...' +
                 '\</a></div></div></div></div>')
                 .insertBefore(newList);
         });
@@ -57,8 +59,9 @@ var initBoard = function () {
         /* Dummuy daya*/
         function addList(listData) {
             var newList = $('#newList');
-            var addedList = $('\<div class="list"><div class="list-container"><div class="list-header">' + listData.name +
-                '\</div><div class="list-item-container"><div class="new-card" id="newCard"><a id="newCardTrigger" data-listID="' + listData.slug + '">Add new card...' +
+            var addedList = $('\<div class="list"><div class="list-container"><div class="list-header"><a id="list-header-label">' + listData.name +
+                '\</a><input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div><div class="list-item-container">' +
+                '\<div class="new-card" id="newCard"><a id="newCardTrigger" data-listID="' + listData.slug + '">Add new card...' +
                 '\</a></div></div></div></div>')
                 .insertBefore(newList);
             $.each(listData.cards, function (index) {

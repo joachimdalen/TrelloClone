@@ -34,12 +34,14 @@
   //This fixes the overlapping of card-content but the id tag is now no longer in the top
   //  position: absolute;
   top: 0;
-  left: 0;
-  background-color: darkorange;
+  left: 5px;
+ // background-color: darkorange;
   border-top-left-radius: 5px;
   font-weight: bold;
-  font-size: 8px;
+  font-size: 10px;
   display: inline-block;
+  margin-left: 5px;
+  color: green
 }
 
 .card-label-container {

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers;
+
 Route::get('/', function () {
     return view('partials.board.board-base');
 });

@@ -100,12 +100,13 @@
 
 .card-id-container {
   top: 0;
-  left: 0;
-  background-color: darkorange;
+  left: 5px;
   border-top-left-radius: 5px;
   font-weight: bold;
-  font-size: 8px;
+  font-size: 10px;
   display: inline-block;
+  margin-left: 5px;
+  color: green;
 }
 
 .card-label-container {
@@ -204,12 +205,22 @@
 }
 
 .list-header {
-  font-size: 14px;
-  font-weight: bold;
   text-align: left;
   margin-left: 5px;
   color: black;
+}
+
+.list-header a {
+  font-size: 14px;
+  font-weight: bold;
   padding-bottom: 5px;
+}
+
+.list-header input[type=text] {
+  border-radius: 5px;
+  width: 90%;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .list-container {
@@ -764,7 +775,6 @@ body {
 }
 
 .dashboard-container {
-  background: rgba(110, 123, 145, 0.5);
   position: relative;
   color: white;
   height: calc(100% - 89px) !important;
@@ -774,6 +784,8 @@ body {
 
 .dashboard-base {
   height: calc(100% - 45px) !important;
+  background: rgba(110, 123, 145, 0.5);
+  overflow: scroll;
   /*
     margin-bottom: 0px;*/
 }

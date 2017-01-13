@@ -1,6 +1,6 @@
 .dashboard-container {
   //margin: 25px;
-  background: rgba(110, 123, 145, 0.5);
+  //background: rgba(110, 123, 145, 0.5);
   position: relative;
   color: white;
   height: calc(100% - 89px) !important;
@@ -10,6 +10,8 @@
 
 .dashboard-base {
   height: calc(100% - 45px) !important;
+  background: rgba(110, 123, 145, 0.5);
+  overflow: scroll;
   /*
     margin-bottom: 0px;*/
 }

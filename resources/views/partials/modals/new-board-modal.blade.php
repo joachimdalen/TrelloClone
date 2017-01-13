@@ -1,7 +1,7 @@
 <div id="newBoardModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content modal-new">
-        <form id="newBoardForm" method="POST" action="">
+        <form id="newBoardForm" method="POST" action="http://localhost:8001/v1/boards/new">
             <div class="modal-header">
                 <span class="close" id="closeNewBoardSpan">&times;</span>
                 <input name="boardName" id="card-new-input" type="text" placeholder="Board name" class="input-control">

@@ -10,27 +10,25 @@
           <a class="tool-button tool-button-sm button-green" href="#"><i class="fa fa-check"></i></a>
           --}}
             <span id="card-edit-label" class="input-control edit-label">Card title</span>
-
             <span class="sub-title">in This is my new list</span>
-
         </div>
         <div class="modal-toolbar modal-toolbar-status modal-toolbar-dates">
             <span class="modal-toolbar-date" style="display: none; color:green;" id="card-created"><i class="fa fa-clock-o"></i> Created: 25/12/2016 14:33</span>
-            <span class="modal-toolbar-date" id="card-age" style="color:green;"><i class="fa fa-calendar"></i> Age: 64 Days</span>
+            <span class="modal-toolbar-date" id="card-age" style="color:green;"><i class="fa fa-calendar"></i> Age: 64 Days (Click me)</span>
             <span class="modal-toolbar-date" id="card-updated" style="color:orange;"><i class="fa fa-clock-o"></i> Updated: 25/12/2016 14:33</span>
             <span class="modal-toolbar-date" id="card-due" style="color:red;"><i class="fa fa-clock-o"></i> Due: 25/12/2016 14:33</span>
 
         </div>
         <div class="modal-toolbar modal-toolbar-status">
             <div class="modal-labels" id="modal-labels">
-                <span class="label label-bg label-red">Default</span> <span
+                {{--<span class="label label-bg label-red">Default</span> <span
                         class="label label-bg label-primary">Primary</span><span class="label label-bg label-green">Success</span>
                 <span class="label label-bg label-red">Default</span>
                 <span class="label label-bg label-primary">Primary</span>
                 <span class="label label-bg label-green">Success</span>
                 <span class="label label-bg label-red">Default</span>
                 <span class="label label-bg label-primary">Primary</span>
-                <span class="label label-bg label-green">Success</span>
+                <span class="label label-bg label-green">Success</span>--}}
             </div>
         </div>
         <div class="modal-toolbar">
