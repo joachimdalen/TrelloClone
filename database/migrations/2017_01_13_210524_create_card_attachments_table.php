@@ -18,6 +18,7 @@ class CreateCardAttachmentsTable extends Migration
             $table->integer('file_id');
             $table->string('file_name');
             $table->string('file_path');
+            $table->string('file_type');
             $table->integer('card_id');
             $table->integer('user_id');
             $table->timestamps();

@@ -12,6 +12,8 @@
   text-align: left;
   margin-left: 5px;
   color: black;
+  padding-bottom: 5px;
+  font-weight: bold;
   a{
     font-size: 14px;
     font-weight: bold;
@@ -23,8 +25,20 @@
     font-size: 14px;
     margin-bottom: 5px;
   }
+  i{
+    float: right;
+    padding: 2px;
+  }
+  i:hover{
+    cursor: pointer;
+  }
 }
-
+.new-list-controls{
+  display: flex;
+  .btn-block{
+    margin-top: 0px !important;
+  }
+}
 .list-container {
   background: #e2e4e6;
   border-radius: 5px;

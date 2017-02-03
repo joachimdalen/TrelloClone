@@ -16,12 +16,13 @@ class CreateCardsTable extends Migration
         Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('card_id')->unique();
+            $table->string('list_id');
             $table->string('name');
-            $table->longText('description');
-            $table->integer('assigned_to');
+            $table->longText('description')->nullable();
+            $table->integer('assigned_to')->nullable();
             $table->integer('order');
             $table->boolean('is_archived')->default('0');
-            $table->dateTime('due_at');
+            $table->dateTime('due_at')->nullable();
             $table->timestamps();
         });
     }

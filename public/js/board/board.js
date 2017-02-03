@@ -2,7 +2,9 @@
  * Created by Dev on 28.12.2016.
  */
 var initBoard = function () {
+        //var app = angular.module('board', ['BoardController', 'listService']);
         console.log('Loaded board.js');
+        var boardId = document.getElementById('board-id-hidden').value;
         $(".list-item").click(function () {
             /*  var list = document.createElement('div').classList.add('list');
              var listContainer = document.createElement('div').classList.add('list-container');
@@ -18,15 +20,20 @@ var initBoard = function () {
              listItemContainer.appendChild(trigger);
              document.createElement('div').classList.add('list').appendChild(document.createElement('div').classList.add('list-container'))*/
         });
-        $(".new-list").on('click', function () {
-            var newList = $('#newList');
-            //<div class="list-header"><a id="list-header-label">This is my list</a><input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>
-            var addedList = $('\<div class="list"><div class="list-container"><div class="list-header"><a id="list-header-label">This is my list</a>' +
-                '\<input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>' +
-                '\<div class="list-item-container"><div class="new-card"><a id="newCardTrigger">Add new card...' +
-                '\</a></div></div></div></div>')
-                .insertBefore(newList);
+        $("#newCardTrigger").on('click', function () {
+            console.log($(this).parent());
         });
+
+
+        /*$(".new-list").on('click', function () {
+         var newList = $('#newList');
+         //<div class="list-header"><a id="list-header-label">This is my list</a><input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>
+         var addedList = $('\<div class="list"><div class="list-container"><div class="list-header"><a id="list-header-label">This is my list</a>' +
+         '\<input type="text" class="list-header" placeholder="List title" id="list-header-field" style="display: none;"></div>' +
+         '\<div class="list-item-container"><div class="new-card"><a id="newCardTrigger">Add new card...' +
+         '\</a></div></div></div></div>')
+         .insertBefore(newList);
+         });*/
         /*$(document).on('click', '.new-card', function () {
          var newCard = $('#newCard');
          var addedCard = $('\<div class="list-item"><div class="item-card"><div class="card-id-container">' +
@@ -97,10 +104,10 @@ var initBoard = function () {
 
         $(document).ready(function () {
             $.ajax({
-                url: "http://localhost:8000/boards/short"
+                url: "http://localhost:8000/lists/" + boardId
             }).then(function (data) {
-                $.each(data.lists, function (index) {
-                    addList(data.lists[index]);
+                $.each(data, function (index) {
+                    addList(data[index]);
                 });
                 console.log('added dummy board');
 
@@ -115,19 +122,19 @@ var initBoard = function () {
 
             // Get some values from elements on the page:
             var $form = $(this),
-                term = $form.find("input[name='cardName']").val(),
+                name = $form.find("input[name='name']").val(),
                 url = $form.attr("action");
-
+            var boardId = document.getElementById('#board-id-hidden');
             // Send the data using post
-            var posting = $.post(url, {cardName: term})
+            var posting = $.post(url, {name: name, board_id: boardId})
                     .done(function (data) {
-                        alert("second success " + data.newCardName);
+                        alert("second success " + data.name);
                         //var modal = document.getElementById('newCardModal');
                         var modal = document.getElementById('newCardModal').style.display = "none";
                     })
                     .fail(function () {
                         alert("error");
-                        $('#board-title').text('This is my board');
+                        //   $('#board-title').text('This is my board');
                     })
                 /* .always(function () {
                  alert("finished");
@@ -140,10 +147,48 @@ var initBoard = function () {
              alert(data.newCardName);
              });*/
         });
+        $("#newListForm").submit(function (event) {
+            console.log('submitting');
+            // Stop form from submitting normally
+            event.preventDefault();
+
+            // Get some values from elements on the page:
+            var $form = $(this),
+                name = $form.find("input[name='name']").val(),
+                url = $form.attr("action");
+
+            // Send the data using post
+            var posting = $.post(url, {name: name, board_id: boardId})
+                .done(function (data) {
+                    alert("second success " + data.name);
+                    //var modal = document.getElementById('newCardModal');
+                    var modal = document.getElementById('newListModal').style.display = "none";
+                    addList(data);
+                })
+                .fail(function (data) {
+                    alert("error");
+                    console.log(data);
+                    //   $('#board-title').text('This is my board');
+                })
+                .always(function () {
+                    alert("finished");
+                });
+
+            console.log('we got to the posting');
+            // Put the results in a div
+            /*posting.done(function (data) {
+             console.log(data);
+             alert(data.newCardName);
+             });*/
+        });
         /*Form handlers*/
         $("#submitNewCard").on('click', function () {
             console.log('ok');
             $("#newCardForm").submit();
+        });
+        $("#submitNewList").on('click', function () {
+            console.log('ok');
+            $("#newListForm").submit();
         });
         $($('#card-age')).on('click', function () {
 

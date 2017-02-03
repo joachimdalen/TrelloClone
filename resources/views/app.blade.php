@@ -9,6 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="/ext/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/app.css">
+
+    {{--<script src="/js/angular.min.js"></script>--}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -17,11 +22,10 @@
     </script>
 
 </head>
-<body>
+<body ng-app="TaskList">
 @include('partials.global.header')
 @yield('content')
 <script src="/js/app.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $(document).ready(function () {
         $.ajaxSetup({
@@ -31,6 +35,9 @@
         });
     });
 </script>
+
+<script src="/app/app.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 @yield('scripts')
 </body>
 </html>

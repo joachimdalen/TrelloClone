@@ -2,13 +2,14 @@
 $transparentBackground: rgba(0, 0, 0, .12);
 
 .board-container {
+  overflow: scroll;
   display: -webkit-flex;
   -webkit-flex-direction: row;
   flex-direction: row;
   z-index: 10;
   padding-bottom: 24px;
- // height: calc(100% - 70px) !important;
-  height: calc(100% - 110px) !important;
+  height: calc(100% - 70px) !important;
+ // height: calc(100% - 110px) !important;
 }
 
 .board-header {

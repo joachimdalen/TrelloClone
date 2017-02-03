@@ -14,7 +14,7 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
+    mix.sass('app.scss')/*.less('app.less')*/
 /*    .scripts([
         'app.js',
     '/board/board.js'

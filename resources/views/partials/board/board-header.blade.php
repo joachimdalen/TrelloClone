@@ -5,6 +5,6 @@
         <input type="text" placeholder="Board title" id="board-title-field" style="display: none">
     </div>
     <div class="header-right">
-        <a id="show-menu">Show menu</a>
+        <a id="show-menu" ng-click="toggleMenu()">@{{ showMenuText }}</a>
     </div>
 </div>

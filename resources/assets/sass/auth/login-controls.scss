@@ -1,0 +1,26 @@
+@import "../variables";
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2; // Ensure icon is above input groups
+  display: block;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+.form-control{
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #d2d6de;
+}
+.social-auth-links {
+  margin: 10px 0;
+}
+  .btn-flat {
+    border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px !important;
+  }
