@@ -14,7 +14,7 @@
   color: black;
   padding-bottom: 5px;
   font-weight: bold;
-  a{
+/*  a {
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 5px;
@@ -24,21 +24,26 @@
     width: 90%;
     font-size: 14px;
     margin-bottom: 5px;
-  }
-  i{
+  }*/
+  i {
     float: right;
     padding: 2px;
   }
-  i:hover{
+  i:hover {
     cursor: pointer;
   }
 }
-.new-list-controls{
+
+.new-list-controls {
   display: flex;
-  .btn-block{
+  .btn-block {
     margin-top: 0px !important;
   }
+  a, button {
+    margin-left: 3px;
+  }
 }
+
 .list-container {
   background: #e2e4e6;
   border-radius: 5px;
@@ -60,7 +65,7 @@
 
 .new-list {
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 5px 5px 15px;
   height: 30px;
   background: $transparentBackground;
   a {

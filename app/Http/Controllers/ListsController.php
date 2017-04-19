@@ -38,6 +38,15 @@ class ListsController
         return response()->json($lists);
     }
 
+    public function rename(Request $request)
+    {
+        $list_id = $request->list_id;
+        $name = $request->name;
+        $list = BoardList::where('list_id', $list_id)->update(['name' => $name]);
+        return response()->json($list);
+
+    }
+
     public function archiveList(Request $request)
     {
 

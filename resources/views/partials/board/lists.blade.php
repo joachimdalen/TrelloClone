@@ -62,14 +62,9 @@
                 </div>
             </div>
         </div>
-        <div class="list">
+                --}}
+    {{--    <div class="list">
             <div class="list-container">
-                <div class="list-header">
-                    <a id="list-header-label">This is my list</a>
-                    <input type="text" class="list-header" placeholder="List title" id="list-header-field"
-                           style="display: none;">
-                </div>
-
                 <div class="list-item-container">
                     <div class="list-item" id="editCardTrigger">
                         <div class="item-card">
@@ -79,23 +74,53 @@
                             <div class="card-footer"></div>
                         </div>
                     </div>
+                    <div class="list-item" ng-show="list.isCreatingCard">
+                        <form style="display: flex" ng-submit="submitNewCard(list)">
+                            <input type="text" placeholder="Card title" ng-model="cardTitle" required/>
+                            <div class="new-list-controls">
+                                <button class="btn btn-block btn-success" type="submit"><i class="fa fa-plus"></i>
+                                </button>
+                                <a class="btn btn-block btn-danger" ng-click="cancelAddCard(list)"><i class="fa fa-ban"></i></a>
+                            </div>
+                        </form>
+                    </div>
                     <div class="new-card">
                         <a id="newCardTrigger">Add new card...</a>
                     </div>
                 </div>
             </div>
-        </div>
-        --}}
+        </div>--}}
+
 
     <div class="list" ng-repeat="list in lists" ng-show="contentLoaded">
         <div class="list-container">
             <div class="list-header">
-                <span>@{{ list.name }}</span>
-                <i class="fa fa-cog" ng-click="viewListMenu(list)"></i>
+                <div class="list-item" ng-show="list.isRenaming">
+                    <form style="display: flex" ng-submit="submitRename(list)">
+                        <input type="text" placeholder="Card name" ng-model="list.name" required/>
+                        <div class="new-list-controls">
+                            <button class="btn btn-block btn-success" type="submit"><i class="fa fa-plus"></i></button>
+                            <a class="btn btn-block btn-danger" ng-click="cancelRename(list)"><i class="fa fa-ban"></i></a>
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="!list.isRenaming">
+                    <span ng-click="rename(list)">@{{ list.name }}</span>
+                    <i class="fa fa-cog" ng-click="viewListMenu(list)"></i>
+                </div>
+                {{--  <ul class="t-list-menu" type="context" id="menu"  ng-show="list.showListMenu">
+                      <li><a><i class="fa fa-edit"></i> Rename</a></li>
+                      <li>New Card</li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                  </ul>--}}
                 <div class="list-menu" ng-show="list.showListMenu">
                     <span>@{{ list.name }}</span>
-                    <ul>
-                        <li><a><i class="fa fa-edit"></i> Rename</a></li>
+                    <ul class="list-unstyled">
+                        <li><a ng-click="rename(list)"><i class="fa fa-edit"></i> Rename</a></li>
                         <li><a ng-click="addCard(list)"><i class="fa fa-plus"></i> New Card</a></li>
                         <li><a><i class="fa fa-edit"></i> Rename</a></li>
                         <li><a><i class="fa fa-archive"></i> Archive</a></li>
@@ -131,37 +156,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="new-card">
+                <div class="list-item" ng-show="list.isCreatingCard">
+                    <form style="display: flex" ng-submit="submitNewCard(list)">
+                        <input type="text" placeholder="Card name" ng-model="list.cardTitle" required/>
+                        <div class="new-list-controls">
+                            <button class="btn btn-block btn-success" type="submit"><i class="fa fa-plus"></i></button>
+                            <a class="btn btn-block btn-danger" ng-click="cancelAddCard(list)"><i class="fa fa-ban"></i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="new-card" ng-show="!list.isCreatingCard">
                     <a id="newCardTrigger" ng-click="addCard(list)">Add new card...</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="list">
+    <div class="list" ng-show="isCreatingList">
         <div class="list-container">
-            <form style="display: flex">
-                <input type="text" placeholder="List name"/>
+            <form style="display: flex" ng-submit="submitNewList()">
+                <input type="text" placeholder="List name" ng-model="listTitle" required/>
                 <div class="new-list-controls">
-                    <a style="margin-left: 10px" class="btn btn-block btn-success"><i class="fa fa-plus"></i></a>
-                    <a style="margin-left: 10px" class="btn btn-block btn-danger"><i class="fa fa-ban"></i></a>
+                    <button class="btn btn-block btn-success" type="submit"><i class="fa fa-plus"></i></button>
+                    <a class="btn btn-block btn-danger" ng-click="cancelAddList()"><i class="fa fa-ban"></i></a>
                 </div>
-
-
             </form>
-            {{-- <div class="list-item-container">
-                 <div class="list-item" id="editCardTrigger">
-                     <div class="item-card">
-                         <div class="card-id-container"></div>
-                         <div class="card-content" style="display: flex">
-
-                         </div>
-                         <div class="card-footer"></div>
-                     </div>
-                 </div>
-             </div>--}}
         </div>
     </div>
-    <div class="list new-list" id="newList">
+    <div class="list new-list" id="newList" ng-show="!isCreatingList">
         <a id="newListTrigger" ng-click="addList()">Add new list...</a>
     </div>
 </div>

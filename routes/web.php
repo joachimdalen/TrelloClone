@@ -43,15 +43,18 @@ Route::group(['prefix' => 'b', 'middleware' => 'auth'], function () {
     });*/
 });
 Route::group(['prefix' => 'u', 'middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'p'], function () {
+        Route::get('/', function () {
+            return view('partials.user.user-profile');
+        });
+    });
     Route::get('/boards', function () {
         return view('partials.dashboard.dashboard');
     });
     Route::get('/boards-new', function () {
         return view('partials.dashboard.dashboard-new');
     });
-    Route::get('/profile', function () {
-        return view('partials.user.user-profile');
-    });
+
 });
 Route::group(['prefix' => 'boards', 'middleware' => 'auth'], function () {
     Route::post('new', 'BoardsController@createBoard');
@@ -61,6 +64,7 @@ Route::group(['prefix' => 'lists', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'cards', 'middleware' => 'auth'], function () {
         Route::post('new', 'CardsController@createCard');
     });
+    Route::post('rename', 'ListsController@rename');
     Route::post('new', 'ListsController@createList');
     Route::get('{board_id}', 'ListsController@getLists');
 });

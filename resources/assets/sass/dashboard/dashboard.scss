@@ -11,7 +11,7 @@
 
 .dashboard-base {
   height: calc(100% - 45px) !important;
- // background: rgba(110, 123, 145, 0.5);
+  // background: rgba(110, 123, 145, 0.5);
   background: rgba(176, 193, 222, 0.5);
   overflow: scroll;
   /*
@@ -93,4 +93,66 @@
       }
     }*/
 
+}
+
+//NEW STYLES
+.center-container-parent {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  background-color: #ccc;
+  border-radius: 3px;
+  overflow: auto;
+}
+.section-container{
+  overflow: auto;
+}
+.boards-list {
+  overflow: auto;
+  text-align: center;
+  li {
+    color: white;
+    height: 100px;
+    width: 250px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    max-height:80%;
+  }
+  .new-board {
+    text-align: center;
+    background: #e2e4e6;
+  }
+  .board-title{
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding: 8px 9pt;
+    position: relative;
+    text-decoration: none;
+    min-height: 80px;
+  }
+}
+.new-board-controls {
+  margin-top: 10px;
+  display: flex;
+  .btn-block {
+    margin-top: 0px !important;
+  }
+  a, button {
+    margin-left: 3px;
+  }
+}
+.new-board-container{
+  padding: 5px;
 }

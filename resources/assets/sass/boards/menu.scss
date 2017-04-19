@@ -1,4 +1,4 @@
-.menu-container {
+/*.t-list-menu-container {
   width: 300px;
   height: calc(90% - 30px);
   right: 45px;
@@ -14,7 +14,7 @@
   }
 }
 
-.menu-header {
+.t-list-menu-header {
   text-align: center;
   color: black;
   h3 {
@@ -22,14 +22,86 @@
   }
 }
 
-.menu-members {
+.t-list-menu-members {
 }
 
-.menu-btn-add {
+.t-list-menu-btn-add {
 }
 
-.menu-option-container {
+.t-list-menu-option-container {
 }
 
-.menu-btn {
+.t-list-menu-btn {
+}*/
+
+
+#target {
+  background: #cad;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.t-list-menu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  margin: 0;
+  padding: 3px 0 4px;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+
+  font-family: Lucida Grande;
+  font-size: 14px;
+  line-height: 15px;
+  z-index: 1;
+}
+
+.t-list-menu::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  z-index: -1;
+}
+
+.t-list-menu hr {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.10);
+  margin: 6px 1px 5px;
+  padding: 0;
+}
+
+.t-list-menu li {
+  display: block;
+  padding: 0 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.t-list-menu li::after {
+  vertical-align: 2px;
+  content: attr(label);
+}
+
+.t-list-menu li:hover {
+  background: -webkit-linear-gradient(top, #648bf5, #2866f2);
+  background: linear-gradient(to bottom, #648bf5 0%, #2866f2 100%);
+  border-top: 1px solid #5a82eb;
+  border-bottom: 1px solid #1758e7;
+}
+
+.t-list-menu li:hover::after {
+  color: #fff;
 }

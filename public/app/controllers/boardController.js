@@ -8,6 +8,7 @@ TaskList.controller('boardController', function ($scope, $http) {
     $scope.showMenuText = "Show Menu";
     $scope.showListMenu = false;
     $scope.isCreatingList = false;
+    $scope.newCardTitle = '';
     $scope.init = function () {
         $scope.loadLists();
     };
@@ -39,6 +40,8 @@ TaskList.controller('boardController', function ($scope, $http) {
                 $scope.lists = response.data;
                 angular.forEach($scope.lists, function (list) {
                     list.showListMenu = false;
+                    list.isCreatingCard = false;
+                    list.isRenaming = false;
                 });
                 $scope.contentLoaded = true;
                 //   console.log(response.data);
@@ -51,10 +54,18 @@ TaskList.controller('boardController', function ($scope, $http) {
 
     /* LISTS*/
     $scope.addList = function () {
-        $scope.modal = $('#newListModal');
-        $scope.modal.show();
+        /* $scope.modal = $('#newListModal');
+         $scope.modal.show();*/
+        $scope.isCreatingList = true;
+    };
+    $scope.cancelAddList = function () {
+        $scope.isCreatingList = false;
+    };
+    $scope.cancelAddCard = function (list) {
+        list.isCreatingCard = false;
     };
     $scope.submitNewList = function () {
+        console.log('we hit this');
         if ($scope.listTitle) {
             $http({
                 method: 'POST',
@@ -65,8 +76,11 @@ TaskList.controller('boardController', function ($scope, $http) {
                 }
             }).then(
                 function success(response) {
+                    response.data.cards = [];
                     $scope.lists.push(response.data);
-                    $scope.modal.hide();
+                    /* $scope.modal.hide();*/
+                    $scope.listTitle = '';
+                    $scope.isCreatingList = false;
                 },
                 function failed(response) {
                     $scope.contentLoaded = false;
@@ -75,12 +89,39 @@ TaskList.controller('boardController', function ($scope, $http) {
             );
         }
     };
+    $scope.rename = function (list) {
+        list.isRenaming = true;
+    };
+    $scope.cancelRename = function (list) {
+        list.isRenaming = false;
+    };
+    $scope.submitRename = function (list) {
+        if (list.name) {
+            $http({
+                method: 'POST',
+                url: '/lists/rename',
+                data: {
+                    list_id: list.list_id,
+                    name: list.name
+                }
+            }).then(
+                function success(response) {
+                    list.isRenaming = false;
+                },
+                function failed(response) {
+                    console.log(response);
+                }
+            );
+        }
+    };
     /* CARDS */
     $scope.addCard = function (list) {
-        $scope.viewListMenu(list);
-        $scope.modal = $('#newCardModal');
-        $scope.currentList = list;
-        $scope.modal.show();
+        console.log('okay');
+        /* $scope.viewListMenu(list);
+         $scope.modal = $('#newCardModal');
+         $scope.currentList = list;
+         $scope.modal.show();*/
+        list.isCreatingCard = true;
     };
     $scope.showCard = function (card, list) {
         //   $scope.showEditModal = true;
@@ -94,23 +135,22 @@ TaskList.controller('boardController', function ($scope, $http) {
         $scope.currentList = list;
         $scope.modal.show();
     };
-    $scope.submitNewCard = function () {
-        if ($scope.cardTitle) {
+    $scope.submitNewCard = function (list) {
+        if (list.cardTitle) {
             $http({
                 method: 'POST',
                 url: '/lists/cards/new',
                 data: {
-                    list_id: $scope.currentList.list_id,
-                    name: $scope.cardTitle
+                    list_id: list.list_id,
+                    name: list.cardTitle
                 }
             }).then(
                 function success(response) {
-                    console.log($scope.currentList);
-                    $scope.currentList.cards.push(response.data);
-                    $scope.modal.hide();
+                    list.cards.push(response.data);
+                    list.isCreatingCard = false;
+                    list.cardTitle = '';
                 },
                 function failed(response) {
-                    $scope.contentLoaded = false;
                     console.log(response);
                 }
             );
